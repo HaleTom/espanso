@@ -557,7 +557,9 @@ mod tests {
     }
 
     impl Log for Capture {
-        fn enabled(&self, _: &Metadata) -> bool { true }
+        fn enabled(&self, _: &Metadata) -> bool {
+            true
+        }
 
         fn log(&self, record: &Record) {
             let thread = std::thread::current().id();
